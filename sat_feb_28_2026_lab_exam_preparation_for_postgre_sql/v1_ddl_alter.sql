@@ -1,0 +1,22 @@
+-- ADD a new column
+ALTER TABLE PRODUCT ADD COLUMN STOCK INT;
+-- Now PRODUCT has: PID, PNAME, PRICE, CATEGORY, STOCK
+
+-- DROP a column
+ALTER TABLE PRODUCT DROP COLUMN STOCK;
+
+-- CHANGE a column's data type
+ALTER TABLE PRODUCT ALTER COLUMN PRICE TYPE NUMERIC(10,2);
+-- ⚠️ This can fail if existing data can't be converted to the new type!
+
+-- RENAME a column
+ALTER TABLE PRODUCT RENAME COLUMN PNAME TO PRODUCT_NAME;
+
+-- ADD a constraint after table creation
+ALTER TABLE PRODUCT ADD CONSTRAINT chk_price CHECK (PRICE >= 0);
+
+-- DROP a constraint
+ALTER TABLE PRODUCT DROP CONSTRAINT chk_price;
+
+-- RENAME the table itself
+ALTER TABLE PRODUCT RENAME TO PRODUCTS;

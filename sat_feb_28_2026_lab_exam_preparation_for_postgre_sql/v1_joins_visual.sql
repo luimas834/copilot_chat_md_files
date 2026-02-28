@@ -1,0 +1,21 @@
+-- ═══════════════════════════════════════════════════════════
+-- VISUAL MENTAL MODEL:
+--
+--   LEFT TABLE          RIGHT TABLE
+--   ┌─────────┐         ┌─────────┐
+--   │ Employee│         │  Dept   │
+--   │─────────│         │─────────│
+--   │ Alice D01│────────│ D01 CSE │
+--   │ Bob   D01│────────│         │
+--   │ Charlie D02│──────│ D02 EEE │
+--   │ David D03│────────│ D03 BBA │
+--   │ Eve   D01│────────│         │
+--   └─────────┘         │ D04 LAW │ ← no matching employee
+--                        └─────────┘
+--
+-- INNER JOIN: Only rows that have a match on BOTH sides
+-- LEFT JOIN:  ALL from left + matches from right (NULL if no match)
+-- RIGHT JOIN: ALL from right + matches from left (NULL if no match)
+-- FULL OUTER: ALL from both (NULL where no match on either side)
+-- CROSS JOIN: Every row × every row (Cartesian product)
+-- ═══════════════════════════════════════════════════════════
