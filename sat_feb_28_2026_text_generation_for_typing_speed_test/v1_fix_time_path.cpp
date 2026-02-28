@@ -1,0 +1,1 @@
+const char base_path[] = "../data/time_txt/time";  // was ../data/texts/medium/medium

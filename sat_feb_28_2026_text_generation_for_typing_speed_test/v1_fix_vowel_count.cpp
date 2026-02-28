@@ -1,0 +1,1 @@
+int fileindex = (current_time % 50) + 1;  // was % 25
